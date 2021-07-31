@@ -15,7 +15,7 @@ local require, new = utility.require, utility.new
 -- local testModule = require({ "*" }, script.Parent.testModule)
 -- local testModule = require({ "test", "test2" }, script.Parent.testModule)
 
-new.ChatServiceMessageListener(function(Player, msg)
+local con = new.ChatServiceMessageListener(function(Player, msg)
 	print(Player, msg)
 end)
 
@@ -25,6 +25,11 @@ local loop = new.whileTrueLoop(0.1, function()
 	print("Hello, world!")
 end)
 
+-- Remove all objects
+
 wait(1)
 loop:Destroy()
+
+wait(9)
+con:Disconnect(); print("Removed chat listener!")
 ```
