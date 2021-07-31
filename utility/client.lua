@@ -34,4 +34,5 @@ Keep in mind that this is just a small WIP project, and my be broken/missing fea
 local export = {} do
 	export.require = require(script.Parent.loader)
 	export.new = export.require({ "*" }, script.Parent.new.main)
+	export.service = export.require({" * "}, script.Parent.service.main)
 end; return export
