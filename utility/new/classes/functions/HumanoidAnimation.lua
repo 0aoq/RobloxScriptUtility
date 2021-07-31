@@ -10,7 +10,7 @@ return {
 		if (anim ~= nil) then
 			local animator = humanoid:FindFirstChild("Animator")
 			track = Instance.new("Animation")
-			track.Name = "GunAnim"
+			track.Name = "ScriptAnimation"
 			track.AnimationId = anim
 			track.Parent = animator
 			track = animator:LoadAnimation(track)
