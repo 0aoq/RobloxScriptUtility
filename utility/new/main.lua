@@ -26,14 +26,4 @@ end
 local export = {} do
 	for _,x in pairs(classes) do 
 		export[x.name] = x.constructor; end
-
-	export.package = {
-		name = "new",
-		author ="0a_oq",
-		description = "A basic module script to load classes from modules",
-		authorLinks = {
-			roblox = 1890842826,
-			github = "0aoq"
-		}
-	}
 end; return export
