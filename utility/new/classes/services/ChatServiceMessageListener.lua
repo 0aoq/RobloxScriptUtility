@@ -6,9 +6,10 @@ local Players = game:GetService("Players")
 return {
 	name = script.Name,
 	constructor = function(luauFunction)
+		local con
 		local function worker (Player)
 			-- fire function
-			Player.Chatted:Connect(function(msg)
+			con = Player.Chatted:Connect(function(msg)
 				luauFunction(Player, msg); end)
 		end
 		
@@ -19,5 +20,13 @@ return {
 		-- handle new joins
 		Players.PlayerAdded:Connect(function(Player)
 			worker(Player); end)
+		
+		-- object functions
+		
+		local properties = {} do
+			function properties:Disconnect()
+				con:Disconnect()
+			end
+		end; return properties
 	end,
 }
