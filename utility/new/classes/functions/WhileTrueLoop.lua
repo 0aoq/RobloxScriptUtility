@@ -1,4 +1,4 @@
--- whileTrueLoop
+-- WhileTrueLoop
 -- author: @roblox/0a_oq, @github/0aoq
 
 return {
