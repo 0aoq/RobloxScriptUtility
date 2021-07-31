@@ -28,6 +28,13 @@ local loop = new.whileTrueLoop(0.1, function()
 	print("Hello, world!")
 end)
 
+-- activity listeners
+
+new.PlayerServiceActivityListener("Join", function(Player, timestamp)
+	print("New Connection: ", Player.Name, Player.DisplayName, timestamp)
+end); new.PlayerServiceActivityListener("Leave", function(Player, timestamp)
+	print("Disconnect: ", Player.Name, Player.DisplayName, timestamp); end)
+
 -- Remove all objects
 
 wait(1)
