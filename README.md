@@ -1,5 +1,6 @@
 # rblxScriptUtility
 Utility scripts for roblox.
+Information file at [utility/client.lua](https://github.com/0aoq/rblxScriptUtility/blob/main/utility/client.lua)
 
 ## Test Script
 
