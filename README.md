@@ -8,9 +8,12 @@ This script has the utility folder in ServerScriptService, as well as the callin
 
 ```lua
 -- ./utility
-local require = require(script.Parent.utility.loader)
-local new = require({ "*" }, script.Parent.utility.new.main)
+local utility = require(script.Parent.utility.client)
+local require, new = utility.require, utility.new
 -- END ./utility
+
+-- local testModule = require({ "*" }, script.Parent.testModule)
+-- local testModule = require({ "test", "test2" }, script.Parent.testModule)
 
 new.ChatServiceMessageListener(function(Player, msg)
 	print(Player, msg)
