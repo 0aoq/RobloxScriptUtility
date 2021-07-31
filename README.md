@@ -12,7 +12,7 @@ This script has the utility folder in ServerScriptService, as well as the callin
 ```lua
 -- ./utility
 local utility = require(script.Parent.utility.client)
-local require, new = utility.require, utility.new
+local require, new, service = utility.require, utility.new, utility.service
 -- END ./utility
 
 -- local testModule = require({ "*" }, script.Parent.testModule)
