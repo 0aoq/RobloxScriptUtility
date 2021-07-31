@@ -24,8 +24,6 @@ return {
 				wait(delay)
 				allowed = false
 			end
-		end
-
-		return properties
+		end; return properties
 	end,
 }
