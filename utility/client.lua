@@ -1,5 +1,19 @@
 --[[
+= == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = =
+== = == == == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = ==
 
+====================================================================
+Licensed under the MIT license
+--------------------------------------------------------------------
+More information on the license at 
+https://github.com/0aoq/RobloxScriptUtility/blob/main/LICENSE
+====================================================================
+
+== = == == == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = ==
+= == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = =
+]]
+
+--[[ 
 # RBLX SCRIPT UTLITY
 
 // BEGIN JSON
@@ -28,11 +42,11 @@ local utility = require(script.Parent.utility.client);
 /// END SNIPPET
 
 Keep in mind that this is just a small WIP project, and my be broken/missing features!!!
-
 ]]
 
 local export = {} do
 	export.require = require(script.Parent.loader)
 	export.new = export.require({ "*" }, script.Parent.new.main)
-	export.service = export.require({" * "}, script.Parent.service.main)
+	export.service = export.require({ "*" }, script.Parent.misc.service)
+	export.addEventListener = export.require({ "*" }, script.Parent.misc.addEventListener)
 end; return export
