@@ -12,6 +12,9 @@ https://github.com/0aoq/RobloxScriptUtility/blob/main/LICENSE
 ====================================================================
 ]]
 
+local functions = require(script.Parent.Parent.core.functions)
+local settings = require(script.Parent.Parent.settings)
+
 -- // TYPES
 
 type class = {
@@ -34,5 +37,9 @@ end
 
 local export = {} do
 	for _,x in pairs(classes) do 
-		export[x.name] = x.constructor; end
+		export[x.name] = x.constructor;
+		if (settings.shoutClasses) then
+			functions:print('Required class "' .. x.name .. '"'); end; end
+	
+	functions:print("Classes loaded.")
 end; return export
