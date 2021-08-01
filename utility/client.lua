@@ -1,3 +1,5 @@
+--!nocheck
+
 --[[
 = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = =
 == = == == == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = == = ==
@@ -44,9 +46,16 @@ local utility = require(script.Parent.utility.client);
 Keep in mind that this is just a small WIP project, and my be broken/missing features!!!
 ]]
 
+local settings = require(script.Parent.settings)
+local misc = { "addEventListener", "service"  }
+
 local export = {} do
-	export.require = require(script.Parent.loader)
+	export.require = require(script.Parent.core.loader)
 	export.new = export.require({ "*" }, script.Parent.new.main)
-	export.service = export.require({ "*" }, script.Parent.misc.service)
-	export.addEventListener = export.require({ "*" }, script.Parent.misc.addEventListener)
+	
+	for _,x in pairs(misc) do
+		if (settings[x]) then
+			export[x] = export.require({ "*" }, script.Parent.misc[x]);
+		end 
+	end
 end; return export
