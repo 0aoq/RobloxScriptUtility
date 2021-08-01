@@ -1,6 +1,15 @@
 -- module loader
 -- author: @roblox/0a_oq, @github/0aoq
 
+--[[ 
+====================================================================
+Licensed under the MIT license
+--------------------------------------------------------------------
+More information on the license at 
+https://github.com/0aoq/RobloxScriptUtility/blob/main/LICENSE
+====================================================================
+]]
+
 -- //  TYPES
 
 type packageLock = {
