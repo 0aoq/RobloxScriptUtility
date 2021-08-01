@@ -1,0 +1,5 @@
+return (function(object, listenerName, luauFunction)
+	object[listenerName]:Connect(function(one, two, three, four, five, six, seven, eight, nine, ten)
+		luauFunction(one, two, three, four, five, six, seven, eight, nine, ten)
+	end)
+end)
