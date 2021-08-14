@@ -11,7 +11,7 @@ https://github.com/0aoq/RobloxScriptUtility/blob/main/LICENSE
 
 return {
 	-- // debug
-	shoutClasses = true,
+	shoutClasses = true, -- shout classes called from the new function
 	-- // features
 	service = true,
 	addEventListener = true
